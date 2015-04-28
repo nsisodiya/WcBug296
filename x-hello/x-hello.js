@@ -11,7 +11,7 @@
   ElementPrototype.createdCallback = function () {
     //this.innerHTML = "This is a Hello from UI Team";
     console.log("createdCallback : Hello");
-    this.appendChild(templateNode.content.cloneNode(true));
+    this.appendChild(document.importNode(templateNode.content,true));
     this.querySelector("span").textContent = this.getAttribute("name");
   };
   ElementPrototype.attributeChangedCallback = function (attrName, old, newVal) {
